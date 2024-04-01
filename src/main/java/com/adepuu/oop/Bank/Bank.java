@@ -1,6 +1,6 @@
 package com.adepuu.oop.Bank;
 
-public class Bank extends BankAccount {
+public class Bank extends com.adepuu.oop.Bank.BankAccount {
     private String bankName;
     public Bank(String accountNumber, String bankName) {
         super(accountNumber);

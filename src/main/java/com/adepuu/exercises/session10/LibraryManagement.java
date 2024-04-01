@@ -1,5 +1,10 @@
 package com.adepuu.exercises.session10;
 
+import src.main.java.com.adepuu.exercises.session10.borrowProcess;
+import src.main.java.com.adepuu.exercises.session10.user;
+
+import java.util.Scanner;
+
 public class LibraryManagement {
     /**
      * Acceptance Criteria:
@@ -14,6 +19,23 @@ public class LibraryManagement {
      * - Make sure to implement Inheritance and Polymorphism properly
      */
     public static void main(String[] args) {
+        user User = new user();
+        borrowProcess borrowing = new borrowProcess();
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to college library.");
+
+        System.out.println("Do you want to borrow something?(y/n to continue)");
+        String answer;
+        answer = input.next();
+
+        if (answer.equals("y")){
+            System.out.println("Book lending system");
+            User.inputBorrowingSys(input);
+            borrowing.bookReturn(input);
+        } else{
+            System.out.println("You are out.");
+            System.exit(0);
+        }
     }
 }
