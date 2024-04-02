@@ -42,8 +42,9 @@ public class borrowProcess extends library{
         System.out.println("Date you return: ");
         setDateA(input.next());
 
-        System.out.println("How many days you can lend the book?");
-        long daylends = input.nextLong();
+        long daylends = 10;
+        System.out.println("You need to return the book within "+daylends+" days after you borrow it.");
+
         calculateForfeit(daylends);
     }
 
